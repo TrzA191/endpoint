@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import {usuarioRoutes} from "./routes/index";
 import {usuRoute} from "./routes/index";
-
+//mi primera vez
 dotenv.config({path:"/home/endpoint/src/.env"});
 
 dotenv.config(); // Asegúrate de que .env esté cargado si lo usas
