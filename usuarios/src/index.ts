@@ -17,8 +17,8 @@ app.get("/", (_req, res) => {
 });
 
 // Usa las rutas correctamente
-app.use("/usuarios", usuarioRoutes);
-app.use("/api", usuRoute);
+app.use("/", usuarioRoutes);
+app.use("/usuarios", usuRoute);
 
 app.listen(port, () => {
     console.log("Mi primer Servicio de Productos en el puerto", port);
