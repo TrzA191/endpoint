@@ -19,9 +19,8 @@ export const gestUsuarios = (_req: Request, res: Response) : void => {
     const response = {
         nombreMetodo: "gestUsuarios",
         data: [
-            { id: 1, nombre: "Juan", correo:"juan@example.com" },
-            { id: 2, nombre: "María",correo:"marian@example.com" },
-            { id: 3, nombre: "carlos",correo:"carlos@example.com" }
+            { id: 1, nombre: "Dr. Ana López", especialidad:"Neurología" },
+            { id: 2, nombre: "Dr Juan Osorio", especialidad:"Traumatologo"}
         ]
     };
 

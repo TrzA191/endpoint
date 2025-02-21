@@ -6,6 +6,6 @@ const router = Router();
 
 // Endpoint GET: /productos/all 
 router.get("/all", getAllUsuarios);  
-router.get("/", gestUsuarios);
+router.get("/consultorio", gestUsuarios);
 export default router;
 
