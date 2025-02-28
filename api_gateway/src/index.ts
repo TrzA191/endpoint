@@ -16,6 +16,7 @@ app.listen(PORT, () => {
 */
 import express from "express";
 import dotenv from "dotenv";
+import axios from "axios";
 import {api_gatewayRoutesRoutes} from "./routes/index";
 dotenv.config({path:"/home/endpoint/src/.env"});
 
@@ -23,7 +24,7 @@ dotenv.config(); // Asegúrate de que .env esté cargado si lo usas
 
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT||3000;
 
 
 app.get("/", (_req, res) => {
@@ -36,3 +37,13 @@ app.use("/api_gateway", api_gatewayRoutesRoutes);
 app.listen(port, () => {
     console.log("Mi primer Servicio de Productos en el puerto", port);
 });
+
+app.get("/productos",async (_req,res)=>{
+    const respuesta = await axios.get("http://localhost:3001/productos/all");
+    res.send({"Los productos son":respuesta.data})
+})
+
+app.get("/usuarios",async(_req,res)=>{
+    const respuesta = await axios.get("http://localhost:3002/usuarios/all");
+    res.send({"Los usuarios son":respuesta.data})
+})

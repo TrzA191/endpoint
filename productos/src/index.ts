@@ -16,6 +16,7 @@ app.listen(PORT, () => {
 */
 import express from "express";
 import dotenv from "dotenv";
+//import axios from "axios";
 import {productoRoutes} from "./routes/index";
 dotenv.config({path:"/home/endpoint/src/.env"});
 
@@ -36,3 +37,4 @@ app.use("/productos", productoRoutes);
 app.listen(port, () => {
     console.log("Mi primer Servicio de Productos en el puerto", port);
 });
+
