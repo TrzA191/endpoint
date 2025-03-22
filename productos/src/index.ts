@@ -24,6 +24,7 @@ dotenv.config(); // Asegúrate de que .env esté cargado si lo usas
 
 const app = express();
 
+app.use(express.json());
 const port = process.env.PORT || 3001;
 
 
@@ -33,6 +34,7 @@ app.get("/", (_req, res) => {
 
 // Usa las rutas correctamente
 app.use("/productos", productoRoutes);
+
 
 app.listen(port, () => {
     console.log("Mi primer Servicio de Productos en el puerto", port);
